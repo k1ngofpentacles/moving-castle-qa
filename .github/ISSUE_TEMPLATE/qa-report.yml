@@ -1,0 +1,80 @@
+name: QA report
+description: Result of one or more QA checks
+title: "[QA] <chapter>.<check>: pass/fail"
+labels: [qa]
+body:
+  - type: dropdown
+    id: chapter
+    attributes:
+      label: Chapter
+      options:
+        - aspect_interpreter_1_9
+        - botania
+        - bracelets
+        - crimson_outfits
+        - foci_restored
+        - forbidden_magic
+        - horizons_h1
+        - horizons_h2
+        - horizons_h3
+        - horizons_h4
+        - horizons_h5
+        - horizons_h6
+        - horizons_h7_1
+        - horizons_h7_2
+        - horizons_h7_3a
+        - horizons_h7_3b
+        - horizons_h7_4
+        - horizons_h7_5
+        - horizons_h7_6
+        - phase3_restorations
+        - phase_5a
+        - phase_5b
+        - phase_5c
+        - phase_5d
+        - phase_6b
+        - phase_6c
+        - phase_7
+        - phase_8
+        - phase_8_4
+        - rift_workshop
+        - shield_foci
+        - thaumaturges
+    validations:
+      required: true
+  - type: input
+    id: check
+    attributes:
+      label: Check id(s)
+      description: As shown under each check, e.g. phase_8_4.protobody_look (comma-separate several)
+    validations:
+      required: true
+  - type: dropdown
+    id: result
+    attributes:
+      label: Result
+      options: [Pass, Fail, Partly works, Could not test]
+    validations:
+      required: true
+  - type: textarea
+    id: saw
+    attributes:
+      label: What you saw
+      description: What happened instead of the expected result. Screenshots welcome.
+  - type: textarea
+    id: feel
+    attributes:
+      label: How it felt
+      description: Balance, clarity, fun (optional)
+  - type: input
+    id: versions
+    attributes:
+      label: Mod versions
+      description: e.g. Concilium 0.17.1, Forbidden Magic 0.2.1, Horizons 0.11.2
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: qa_verdicts.log and logs
+      description: Drag in qa_verdicts.log (minecraft folder), latest.log or a crash report

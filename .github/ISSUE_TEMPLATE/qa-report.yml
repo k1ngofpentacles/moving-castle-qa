@@ -8,45 +8,18 @@ body:
     attributes:
       label: Chapter
       options:
-        - aspect_interpreter_1_9
-        - botania
-        - bracelets
-        - crimson_outfits
-        - foci_restored
+        - aspect_interpreter
+        - concilium
         - forbidden_magic
-        - horizons_h1
-        - horizons_h2
-        - horizons_h3
-        - horizons_h4
-        - horizons_h5
-        - horizons_h6
-        - horizons_h7_1
-        - horizons_h7_2
-        - horizons_h7_3a
-        - horizons_h7_3b
-        - horizons_h7_4
-        - horizons_h7_5
-        - horizons_h7_6
-        - phase3_restorations
-        - phase_5a
-        - phase_5b
-        - phase_5c
-        - phase_5d
-        - phase_6b
-        - phase_6c
-        - phase_7
-        - phase_8
-        - phase_8_4
-        - rift_workshop
-        - shield_foci
-        - thaumaturges
+        - gadomancy
+        - horizons
     validations:
       required: true
   - type: input
     id: check
     attributes:
       label: Check id(s)
-      description: As shown under each check, e.g. phase_8_4.protobody_look (comma-separate several)
+      description: As shown under each check, e.g. concilium.protobody (comma-separate several)
     validations:
       required: true
   - type: dropdown
